@@ -23,6 +23,14 @@ namespace ContactManager
         public MainWindow()
         {
             InitializeComponent();
+
+            Database datab = new Database();
+            List<Contact> contactlist = datab.getContactList();
+
+            contactlistbox.ItemsSource = contactlist;
         }
+
+
+
     }
 }
